@@ -1,0 +1,12 @@
+CurrentCarryWeightRVA. // Use CheatEngine to find the current players weight which resides in a static address.
+StatsPointerRetrieverRVA. // Refer to Disassembly below. Find with a debugger.
+
+Disassembly for StatsPointerRetrieverRVA:
+00007FF7E3B89F30 | 44 8B 8A 7C 01 00 00     | MOV R9D,DWORD PTR DS:[RDX+17C]          |
+00007FF7E3B89F37 | 48 8B 51 30              | MOV RDX,QWORD PTR DS:[RCX+30]           |
+00007FF7E3B89F3B | 42 8B 04 CA              | MOV EAX,DWORD PTR DS:[RDX+R9*8]         |
+00007FF7E3B89F3F | 41 89 00                 | MOV DWORD PTR DS:[R8],EAX               |
+00007FF7E3B89F42 | 33 C0                    | XOR EAX,EAX                             | << StatsPointerRetriever hook goes here.
+00007FF7E3B89F44 | 42 38 44 CA 04           | CMP BYTE PTR DS:[RDX+R9*8+4],AL         |
+00007FF7E3B89F49 | 0F 94 C0                 | SETE AL                                 |
+00007FF7E3B89F4C | C3                       | RET                                     |

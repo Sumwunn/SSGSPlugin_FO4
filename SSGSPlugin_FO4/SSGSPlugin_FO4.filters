@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>C++</Filter>
+    </ClCompile>
+    <ClCompile Include="SSGSPlugin_FO4.cpp">
+      <Filter>C++</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>C++</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ASM">
+      <UniqueIdentifier>{179ccf7c-09cd-4a19-824d-720c017b3d94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C++">
+      <UniqueIdentifier>{3b2d2851-2c9d-40d1-bb3b-68abc68340b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{87bd02c5-b606-4740-bdfb-b24950827ca4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SSGSPlugin_FO4.rc">
+      <Filter>Headers</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <HJWASM Include="HookWriter.asm">
+      <Filter>ASM</Filter>
+    </HJWASM>
+    <HJWASM Include="VersionCheck.asm">
+      <Filter>ASM</Filter>
+    </HJWASM>
+    <HJWASM Include="StatsRetriever.asm">
+      <Filter>ASM</Filter>
+    </HJWASM>
+  </ItemGroup>
+</Project>
