@@ -46,6 +46,11 @@ I hope to add XP one day but not having much luck finding a reliable hooking add
 
 **Discussion**: https://community.bethesda.net/message/127371
 
+**Compile Notes**
+
+- HJWasm must be setup before opening the project.
+- Requisites: PlayerStatsAPI_FO4, and the last three mentioned the credits.
+
 **NOTES**
 
 - This plugin retrieves players stats by hooking into Fallout4.exe during runtime.
