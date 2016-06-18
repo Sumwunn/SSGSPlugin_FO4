@@ -49,7 +49,7 @@ I hope to add XP one day but not having much luck finding a reliable hooking add
 **Compile Notes**
 
 - HJWasm must be setup before opening the project.
-- Requisites: PlayerStatsAPI_FO4, and the last three mentioned the credits.
+- Requisites: PlayerStatsAPI_FO4, and the last three mentioned in the credits.
 
 **NOTES**
 
