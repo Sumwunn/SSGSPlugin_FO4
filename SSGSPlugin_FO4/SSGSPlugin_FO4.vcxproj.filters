@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Sources\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="SSGSPlugin_FO4.cpp">
+      <Filter>Sources\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Sources\C++</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{fd3570d7-f6dc-49f7-8e78-775f7afd76ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\C++">
+      <UniqueIdentifier>{b2b94920-9127-416b-96af-11f47076b3bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{9dd7400b-cdd2-4a03-85a0-20104d9b2702}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SSGSPlugin_FO4.rc">
+      <Filter>Headers</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
