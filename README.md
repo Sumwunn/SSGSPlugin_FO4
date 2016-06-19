@@ -16,7 +16,7 @@ It's a plugin I made that allows SteelSeries users to use GameSense with Fallout
 
 2. Inside the Setup folder, run ADD.bat. This will setup Fallout 4 with GameSense and create SSGSPlugin_Fallout4.ini in My Games/Fallout4, after that you can customise your devices for Fallout 4.
 
-3. Inside the Plugin folder, copy DllLoader.txt, X3DAudio1_7.dll & SSGSPlugin_Fallout4.dll to Fallout 4's root folder.
+3. Copy the Plugin contents to Fallout 4's root folder.
 
 4. Play! (If it doesn't work, check your firewall settings and make sure 127.0.0.1 is allowed and all ports for Fallout4.exe (SteelSeries Engine randomises ports on startup)
 
