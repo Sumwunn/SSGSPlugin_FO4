@@ -44,6 +44,10 @@ RADS (In GameSense, 0 = No RADS, 100 = Dead)
 
 I hope to add XP one day but not having much luck finding a reliable hooking address.
 
+**Supported version(s)**:
+
+v1.5.307.0
+
 **Discussion**: https://community.bethesda.net/message/127371
 
 **Compile Notes**
