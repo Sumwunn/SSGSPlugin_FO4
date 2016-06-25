@@ -132,14 +132,14 @@ int Setup() {
 	if (Result == -1) {
 		if (bConsoleLoggingEnabled) {
 			cout << "Incorrect process detected." << endl;
-			return 0;
 		}
+		return 0;
 	}
 	else if (Result == -2) {
 		if (bConsoleLoggingEnabled) {
 			cout << "Unsupported version detected." << endl;
-			return 0;
 		}
+		return 0;
 	}
 
 	// Setup threads.
