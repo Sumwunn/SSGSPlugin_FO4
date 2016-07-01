@@ -58,7 +58,7 @@ I hope to add XP one day but not having much luck finding a reliable hooking add
 - Only zones are supported so far, due to me only owning an APEX keyboard.
 - Your devices will flash red (or not, depending on your setup) when loading up Fallout 4 and when loading a game because Fallout4.exe writes random data to the buffers my program reads from during that time. This is normal.
 - Written in C++/ASM (Visual Studio 2015 & HJWasm).
-- The Dll loader can actually be used to load any dll into Fallout 4 or the Creation Kit. (edit DllLoader.txt for Fallout4.exe & DllLoaderEditor.txt for CreationKit.exe)
+- The Dll loader can actually be used to load any dll into Fallout 4.
 
 **CREDITS**
 
