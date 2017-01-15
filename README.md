@@ -12,18 +12,13 @@ It's a plugin I made that allows SteelSeries users to use GameSense with Fallout
 
 **How to install**
 
-1. First, make sure you have the latest SteelSeries Engine 3 installed. (http://steelseries.com/engine)
-
-2. Inside the Setup folder, run ADD.bat. This will setup Fallout 4 with GameSense and create SSGSPlugin_Fallout4.ini in My Games/Fallout4, after that you can customise your devices for Fallout 4.
-
-3. Copy the Plugin contents to Fallout 4's root folder.
-
-4. Play! (If it doesn't work, check your firewall settings and make sure 127.0.0.1 is allowed and all ports for Fallout4.exe (SteelSeries Engine randomises ports on startup)
+1. Install my Dll Loader manually. (You will be prompted to install prior to download)
+2. Install this mod via NMM or drop the plugins folder in your games data folder.
+3. Play!
 
 **How to uninstall**
 
-1. Delete DllLoader.txt, X3DAudio1_7.dll & SSGSPlugin_Fallout4.dll from Fallout 4's root folder.
-2. Run REMOVE.bat inside the Setup folder, this will remove Fallout 4 from GameSense and delete it's config from My Games/Fallout4.
+1. Uninstall via NMM or manually delete the files.
 
 **Settings**
 
