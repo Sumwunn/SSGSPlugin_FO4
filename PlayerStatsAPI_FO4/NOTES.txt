@@ -1,0 +1,35 @@
+CurrentCarryWeightRVA. // Use CheatEngine to find the current players weight which resides in a static address.
+StatsPointerRetrieverRVA. // Refer to Disassembly below. Find with a debugger.
+
+Disassembly for StatsPointerRetrieverRVA:
+00007FF7CE289280 | 48 89 5C 24 08              | MOV QWORD PTR SS:[RSP+8],RBX                         |
+00007FF7CE289285 | 57                          | PUSH RDI                                             |
+00007FF7CE289286 | 48 83 EC 30                 | SUB RSP,30                                           |
+00007FF7CE28928A | 0F 29 74 24 20              | MOVAPS DQWORD PTR SS:[RSP+20],XMM6                   |
+00007FF7CE28928F | 48 8B D9                    | MOV RBX,RCX                                          |
+00007FF7CE289292 | E8 D9 D5 33 FF              | CALL fallout4.7FF7CD5C6870                           |
+00007FF7CE289297 | 48 8B B8 D8 00 00 00        | MOV RDI,QWORD PTR DS:[RAX+D8]                        |
+00007FF7CE28929E | 48 8B 43 58                 | MOV RAX,QWORD PTR DS:[RBX+58]                        |
+00007FF7CE2892A2 | 48 8D 4B 58                 | LEA RCX,QWORD PTR DS:[RBX+58]                        |
+00007FF7CE2892A6 | 48 8B D7                    | MOV RDX,RDI                                          |
+00007FF7CE2892A9 | FF 50 10                    | CALL QWORD PTR DS:[RAX+10]                           |
+00007FF7CE2892AC | 0F 57 C9                    | XORPS XMM1,XMM1                                      |
+00007FF7CE2892AF | 0F 28 F0                    | MOVAPS XMM6,XMM0                                     |
+00007FF7CE2892B2 | 0F 2E F1                    | UCOMISS XMM6,XMM1                                    |
+00007FF7CE2892B5 | 74 22                       | JE fallout4.7FF7CE2892D9                             |
+00007FF7CE2892B7 | 48 8B 43 58                 | MOV RAX,QWORD PTR DS:[RBX+58]                        |
+00007FF7CE2892BB | 48 8D 4B 58                 | LEA RCX,QWORD PTR DS:[RBX+58]                        |
+00007FF7CE2892BF | 48 8B D7                    | MOV RDX,RDI                                          |
+00007FF7CE2892C2 | FF 50 08                    | CALL QWORD PTR DS:[RAX+8]                            |
+00007FF7CE2892C5 | F3 0F 5E C6                 | DIVSS XMM0,XMM6                                      | << StatsPointerRetriever hook goes here.
+00007FF7CE2892C9 | 48 8B 5C 24 40              | MOV RBX,QWORD PTR SS:[RSP+40]                        |
+00007FF7CE2892CE | 0F 28 74 24 20              | MOVAPS XMM6,DQWORD PTR SS:[RSP+20]                   |
+00007FF7CE2892D3 | 48 83 C4 30                 | ADD RSP,30                                           |
+00007FF7CE2892D7 | 5F                          | POP RDI                                              |
+00007FF7CE2892D8 | C3                          | RET                                                  |
+00007FF7CE2892D9 | F3 0F 10 05 AF 53 DD 01     | MOVSS XMM0,DWORD PTR DS:[7FF7D005E690]               |
+00007FF7CE2892E1 | 48 8B 5C 24 40              | MOV RBX,QWORD PTR SS:[RSP+40]                        |
+00007FF7CE2892E6 | 0F 28 74 24 20              | MOVAPS XMM6,DQWORD PTR SS:[RSP+20]                   |
+00007FF7CE2892EB | 48 83 C4 30                 | ADD RSP,30                                           |
+00007FF7CE2892EF | 5F                          | POP RDI                                              |
+00007FF7CE2892F0 | C3                          | RET                                                  |
