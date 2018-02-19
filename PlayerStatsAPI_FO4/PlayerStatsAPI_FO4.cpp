@@ -56,10 +56,10 @@ int InstallHook() {
 	//// Fallout 4 Version Check ////
 	// Using the entry point rva from pe header as my verison check.
 	int Result = GetEntryPointRVA(TargetModule);
-	if (Result == 0x06CD6310) {
-		// Fill in version specific data (v1.10.20.0.0).
-		StatsPointerRetrieverRVA = (void*)0xD78187;
-		CurrentCarryWeightRVA = (void*)0x58F2E60;
+	if (Result == 0x06CF3310) {
+		// Fill in version specific data (v1.10.64.0).
+		StatsPointerRetrieverRVA = (void*)0xD79FB7;
+		CurrentCarryWeightRVA = (void*)0x590DAE0;
 	}
 #ifdef FO4_BETA_SUPPORT
 	else if (Result == 0) {
