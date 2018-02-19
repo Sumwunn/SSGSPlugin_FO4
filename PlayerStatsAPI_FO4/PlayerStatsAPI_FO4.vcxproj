@@ -199,9 +199,6 @@
       <FileType>Document</FileType>
     </UASM>
   </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="PlayerStatsAPI_FO4.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\uasm.targets" />
