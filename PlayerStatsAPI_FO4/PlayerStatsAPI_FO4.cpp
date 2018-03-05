@@ -57,8 +57,8 @@ int InstallHook() {
 	// Using the entry point rva from pe header as my verison check.
 	int Result = GetEntryPointRVA(TargetModule);
 	if (Result == 0x06CF3310) {
-		// Fill in version specific data (v1.10.64.0).
-		StatsPointerRetrieverRVA = (void*)0xD79FB7;
+		// Fill in version specific data (v1.10.75.0).
+		StatsPointerRetrieverRVA = (void*)0xD79F77;
 		CurrentCarryWeightRVA = (void*)0x590DAE0;
 	}
 #ifdef FO4_BETA_SUPPORT
