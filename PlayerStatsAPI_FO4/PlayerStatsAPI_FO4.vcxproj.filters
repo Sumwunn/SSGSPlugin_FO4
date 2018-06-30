@@ -46,11 +46,6 @@
     <Text Include="NOTES.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="PlayerStatsAPI_FO4.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <UASM Include="HookWriter.asm">
       <Filter>Source Files\ASM</Filter>
     </UASM>

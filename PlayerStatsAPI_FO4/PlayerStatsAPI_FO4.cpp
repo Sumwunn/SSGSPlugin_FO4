@@ -39,16 +39,19 @@ extern "C" int StatsGetValue(DWORD StatsValue);
 extern "C" int CarryWeightGetCurrentValue();
 
 #ifndef PLAYERSTATSAPI_FO4_STATICLIB
-extern "C" __declspec(dllexport) int InstallHook() {
+extern "C" __declspec(dllexport) int InstallHook() 
+{
 #else
-int InstallHook() {
+int InstallHook() 
+{
 #endif
 
 	//////// Setup Part 1 - Addresses ////////
 
 	// Get module of target to writes hooks to.
 	HMODULE TargetModule = GetModuleHandle(L"Fallout4.exe");
-	if (TargetModule == NULL) {
+	if (TargetModule == NULL) 
+	{
 		// Incorrect process.
 		return -1;
 	}
@@ -56,13 +59,15 @@ int InstallHook() {
 	//// Fallout 4 Version Check ////
 	// Using the entry point rva from pe header as my verison check.
 	int Result = GetEntryPointRVA(TargetModule);
-	if (Result == 0x06CF3310) {
-		// Fill in version specific data (v1.10.75.0).
-		StatsPointerRetrieverRVA = (void*)0xD79F77;
+	if (Result == 0x06CF3310) 
+	{
+		// Fill in version specific data (v1.10.98.0).
+		StatsPointerRetrieverRVA = (void*)0xD7A017;
 		CurrentCarryWeightRVA = (void*)0x590DAE0;
 	}
 #ifdef FO4_BETA_SUPPORT
-	else if (Result == 0) {
+	else if (Result == 0) 
+	{
 		// Fill in version specific data ().
 		StatsPointerRetrieverRVA = (void*)0;
 		CurrentCarryWeightRVA = (void*)0;

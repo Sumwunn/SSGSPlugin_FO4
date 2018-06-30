@@ -72,8 +72,8 @@ FILE *pConsole = NULL;
 // Handles.
 HANDLE GameSenseDataSender_hThread = NULL;
 
-int Setup() {
-
+int Setup() 
+{
 	//////// Setup Part 1 - INI ////////
 
 	// Setup INI.
@@ -89,13 +89,15 @@ int Setup() {
 	bConsoleLoggingEnabled = GetPrivateProfileInt(L"General", L"bConsoleLoggingEnabled", FALSE, INIPath);
 
 	// Am I enabled?
-	if (bEnabled == FALSE) {
+	if (bEnabled == FALSE) 
+	{
 		// NOPE.
 		return 0;
 	}
 
 	// Enable logging via console.
-	if (bConsoleLoggingEnabled) {
+	if (bConsoleLoggingEnabled) 
+	{
 		AllocConsole();
 		SetConsoleTitle(L"SteelSeries GameSense Plugin Logging");
 		freopen_s(&pConsole, "CONOUT$", "r+", stdout);
@@ -108,7 +110,8 @@ int Setup() {
 	strcat_s(SSGS_corePropsJsonPath, MAX_PATH, "\\SteelSeries\\SteelSeries Engine 3\\coreProps.json");
 	// Grab address.
 	FILE* fp;
-	if (fopen_s(&fp, SSGS_corePropsJsonPath, "rb") != 0) {
+	if (fopen_s(&fp, SSGS_corePropsJsonPath, "rb") != 0) 
+	{
 		// No coreProps.json?!
 		if (bConsoleLoggingEnabled) {
 			cout << "coreProps.json not found. Make sure GameSense is enabled." << endl;
@@ -129,14 +132,18 @@ int Setup() {
 	//////// Setup Part 3 - Hooks & Threads ////////
 
 	int Result = InstallHook();
-	if (Result == -1) {
-		if (bConsoleLoggingEnabled) {
+	if (Result == -1) 
+	{
+		if (bConsoleLoggingEnabled) 
+		{
 			cout << "Incorrect process detected." << endl;
 		}
 		return 0;
 	}
-	else if (Result == -2) {
-		if (bConsoleLoggingEnabled) {
+	else if (Result == -2) 
+	{
+		if (bConsoleLoggingEnabled) 
+		{
 			cout << "Unsupported version detected." << endl;
 		}
 		return 0;
@@ -149,8 +156,8 @@ int Setup() {
 }
 
 // Keeps SteelSeries Engine 3 GameSense server updated with game data.
-DWORD WINAPI GameSenseDataSender(LPVOID lpParam) {
-
+DWORD WINAPI GameSenseDataSender(LPVOID lpParam) 
+{
 	// Data.
 	const char* GameDataJson = "{\"game\":\"FALLOUT4\",\"event\":\"HEALTH\",\"data\":{\"value\":0}}";
 	const char* GameData2Json = "{\"game\":\"FALLOUT4\",\"event\":\"STAMINA\",\"data\":{\"value\":0}}";
@@ -174,7 +181,8 @@ DWORD WINAPI GameSenseDataSender(LPVOID lpParam) {
 	GameJson4Parsed.Parse(GameData4Json);
 
 	// Infinite loop.
-	for (;;) {
+	for (;;) 
+	{
 		Sleep(iUpdateInterval);
 
 		//////////////// -HEALTH- ////////////////
@@ -250,8 +258,8 @@ DWORD WINAPI GameSenseDataSender(LPVOID lpParam) {
 	return 0;
 }
 
-void PostJson(StringBuffer& Buffer, char* Address) {
-
+void PostJson(StringBuffer& Buffer, char* Address) 
+{
 	curl_easy easy;
 	curl_header header;
 	header.add("Content-Type: application/json");
